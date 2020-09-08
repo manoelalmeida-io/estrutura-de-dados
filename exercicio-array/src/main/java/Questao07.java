@@ -48,14 +48,17 @@ public class Questao07 {
     int i2 = 0;
 
     while (i1 < 5 || i2 < 5) {
-      if (i2 > 4 || vetor1[i1] < vetor2[i2]) {
-        ordenados[i1 + i2] = vetor1[i1];
-        i1++;
+      if (i1 < 5) {
+        if (i2 > 4 || vetor1[i1] <= vetor2[i2]) {
+          ordenados[i1 + i2] = vetor1[i1];
+          i1++;
+        }
       }
-
-      if (i1 > 4 || vetor1[i1] > vetor2[i2]) {
-        ordenados[i1 + i2] = vetor2[i2];
-        i2++;
+      if (i2 < 5) {
+        if (i1 > 4 || vetor1[i1] >= vetor2[i2]) {
+          ordenados[i1 + i2] = vetor2[i2];
+          i2++;
+        }
       }
     }
 
