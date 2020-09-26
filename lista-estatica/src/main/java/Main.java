@@ -30,13 +30,13 @@ public class Main {
     System.out.println(lista.adicionaNoInicio(10));
     lista.exibe();
 
-    System.out.println(lista.substituir(0, 18));
+    System.out.println(lista.substitui(0, 18));
     lista.exibe();
-    System.out.println(lista.substituir(10, 42));
+    System.out.println(lista.substitui(10, 42));
     lista.exibe();
 
-    System.out.println(lista.contarOcorrencias(18));
-    System.out.println(lista.contarOcorrencias(0));
+    System.out.println(lista.contaOcorrencias(18));
+    System.out.println(lista.contaOcorrencias(0));
 
     lista.limpar();
     lista.exibe();

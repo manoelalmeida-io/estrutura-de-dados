@@ -30,7 +30,7 @@ public class ListaEstatica {
     return false;
   }
 
-  public boolean substituir(int indice, int valor) {
+  public boolean substitui(int indice, int valor) {
     if (indice > nroElem || indice < 0) {
       return false;
     }
@@ -38,8 +38,8 @@ public class ListaEstatica {
     vetor[indice] = valor;
     return true;
   }
-  // contarOcorrencia e limpa
-  public int contarOcorrencias(int elemento) {
+
+  public int contaOcorrencias(int elemento) {
     int contador = 0;
     for (int i = 0; i < nroElem; i++) {
       contador += vetor[i] == elemento ? 1 : 0;
