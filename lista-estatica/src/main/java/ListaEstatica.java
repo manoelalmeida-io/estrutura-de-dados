@@ -1,7 +1,7 @@
 public class ListaEstatica {
 
-  int[] vetor;
-  int nroElem; // representa a quantidade de elementos realmente inserida no vetor
+  private int[] vetor;
+  private int nroElem; // representa a quantidade de elementos realmente inserida no vetor
 
   public ListaEstatica(int tamanho) {
     vetor = new int[tamanho];
@@ -16,14 +16,50 @@ public class ListaEstatica {
     return false;
   }
 
+  public boolean adicionaNoInicio(int elemento) {
+    if (nroElem < vetor.length) {
+      for (int i = nroElem; i > 0; i--) {
+        vetor[i] = vetor[i - 1];
+      }
+      vetor[0] = elemento;
+      nroElem++;
+
+      return true;
+    }
+
+    return false;
+  }
+
+  public boolean substituir(int indice, int valor) {
+    if (indice > nroElem || indice < 0) {
+      return false;
+    }
+
+    vetor[indice] = valor;
+    return true;
+  }
+  // contarOcorrencia e limpa
+  public int contarOcorrencias(int elemento) {
+    int contador = 0;
+    for (int i = 0; i < nroElem; i++) {
+      contador += vetor[i] == elemento ? 1 : 0;
+    }
+    return contador;
+  }
+
   public void exibe() {
     System.out.print("[");
     for (int i = 0; i < nroElem; i++) {
-      System.out.print(vetor[i] + (i < (nroElem - 1) ? ", " : "]\n"));
+      System.out.print(vetor[i] + (i < (nroElem - 1) ? ", " : ""));
     }
+    System.out.println("]");
   }
 
-  public int busca(int elemento) {
+  public int getTamanho() {
+    return nroElem;
+  }
+
+  public int getElemento(int elemento) {
     for (int i = 0; i < nroElem; i++) {
       if (vetor[i] == elemento) {
         return i;
@@ -46,12 +82,10 @@ public class ListaEstatica {
   }
 
   public boolean removeElemento(int elemento) {
-    int indice = this.busca(elemento);
+    return this.removePeloIndice(this.getElemento(elemento));
+  }
 
-    if (indice == -1) {
-      return false;
-    }
-
-    return this.removePeloIndice(indice);
+  public void limpar() {
+    nroElem = 0;
   }
 }
