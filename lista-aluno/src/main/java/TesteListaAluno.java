@@ -9,8 +9,13 @@ public class TesteListaAluno {
     ListaObj<Aluno> lista = new ListaObj<Aluno>(10);
 
     while(!fim) {
-      exibirMenu();
+      System.out.println("\n1. Adicionar Aluno");
+      System.out.println("2. Exibir a lista");
+      System.out.println("3. Exibir um aluno da lista");
+      System.out.println("4. Gravar lista");
+      System.out.println("5. Fim");
       System.out.print("\nDigite uma opção: ");
+
       int opcao = leitor.nextInt();
 
       switch (opcao) {
@@ -43,13 +48,5 @@ public class TesteListaAluno {
           break;
       }
     }
-  }
-
-  public static void exibirMenu() {
-    System.out.println("\n1. Adicionar Aluno");
-    System.out.println("2. Exibir a lista");
-    System.out.println("3. Exibir um aluno da lista");
-    System.out.println("4. Limpar a lista");
-    System.out.println("5. Fim");
   }
 }
