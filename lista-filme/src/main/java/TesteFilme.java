@@ -114,7 +114,7 @@ public class TesteFilme {
     try {
       System.out.printf("%-8s%-20s%-10s%-15s%-5s\n", "ID", "NOME", "NOTA", "GENERO", "IDADE");
 
-      while(entrada.hasNextLine()) {
+      while(entrada.hasNext()) {
         int id = entrada.nextInt();
         String nome = entrada.next();
         double nota = entrada.nextDouble();
@@ -160,7 +160,7 @@ public class TesteFilme {
       for (int i = 0; i < lista.getTamanho(); i++) {
         Filme f = lista.getElemento(i);
 
-        saida.format("%d;%s;%.2f;%s;%d", f.getIdFilme(), f.getNome(), f.getNota(), f.getGenero(), f.getIdade());
+        saida.format("%d;%s;%.2f;%s;%d%n", f.getIdFilme(), f.getNome(), f.getNota(), f.getGenero(), f.getIdade());
       }
     } catch (FormatterClosedException erro) {
       System.err.println("Erro ao gravar arquivo");
