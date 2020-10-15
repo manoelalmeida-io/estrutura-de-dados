@@ -30,12 +30,15 @@ public class ListaEstatica {
     return false;
   }
 
-  public boolean substitui(int indice, int valor) {
-    if (indice > nroElem || indice < 0) {
+  public boolean substitui(int valorAntigo, int valor) {
+    int indiceValorAntigo = this.getElemento(valorAntigo);
+
+    if (indiceValorAntigo < 0) {
+      System.out.println("O valor não foi encontrado");
       return false;
     }
 
-    vetor[indice] = valor;
+    vetor[indiceValorAntigo] = valor;
     return true;
   }
 

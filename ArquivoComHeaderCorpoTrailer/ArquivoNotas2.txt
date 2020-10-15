@@ -1,0 +1,4 @@
+00NOTA2020213-10-2020 21:06:2901
+02ADS  01192021Manoel de Souza Almeida                           Banco de Dados                          10,00000
+02ADS  01192029João Lucas                                        Algoritmos                              10,00001
+010000000002

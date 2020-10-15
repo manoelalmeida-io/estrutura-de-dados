@@ -105,7 +105,7 @@ public class TesteFilme {
 
     try {
       arq = new FileReader((nomeArquivo + ".csv"));
-      entrada = new Scanner(arq).useDelimiter(";|\\r\\n");
+      entrada = new Scanner(arq).useDelimiter(";|\\r\\n|\\n");
     } catch (FileNotFoundException erro) {
       System.err.println("Arquivo não encontrado");
       System.exit(1);
