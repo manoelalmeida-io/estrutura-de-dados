@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ex4 {
@@ -14,12 +15,16 @@ public class Ex4 {
         maxAluno = leitor.nextInt();
 
         if (maxAluno < 5 || maxAluno > 15) {
-          throw new Exception("");
+          throw new Exception("Digite um valor válido entre 5 e 15");
         }
 
         valido = true;
-      } catch (Exception e) {
-        System.out.println("Digite um valor válido entre 5 e 15");
+      } catch (InputMismatchException e) {
+        System.out.println(e + ": " + "Digite um número válido");
+        leitor = new Scanner(System.in);
+      }
+      catch (Exception e) {
+        System.out.println(e.toString());
       }
     }
 

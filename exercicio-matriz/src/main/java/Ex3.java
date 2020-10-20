@@ -14,6 +14,7 @@ public class Ex3 {
       }
     }
 
+    Ex2.exibeMatriz(matriz);
     exibeMatrizMedia(matriz);
   }
 

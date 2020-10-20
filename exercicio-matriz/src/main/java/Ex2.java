@@ -29,20 +29,19 @@ public class Ex2 {
       }
     }
 
-    System.out.print("Matriz A ");
+    System.out.println("Matriz A");
     exibeMatriz(matrizA);
 
-    System.out.print("Matriz B ");
+    System.out.println("Matriz B");
     exibeMatriz(matrizB);
 
-    System.out.print("Matriz C ");
+    System.out.println("Matriz C");
     exibeMatriz(matrizC);
   }
 
   public static void exibeMatriz(int[][] matriz) {
-    System.out.println("[");
     for (int l = 0; l < matriz.length; l++) {
-      System.out.print("\t[");
+      System.out.print("[");
       for (int c = 0; c < matriz[l].length; c++) {
         System.out.print(matriz[l][c]);
         System.out.print((c < matriz[l].length - 1) ? ", " : "");
@@ -50,6 +49,6 @@ public class Ex2 {
       System.out.print("]");
       System.out.println((l < matriz.length - 1) ? "," : "");
     }
-    System.out.println("]");
+    System.out.println();
   }
 }
