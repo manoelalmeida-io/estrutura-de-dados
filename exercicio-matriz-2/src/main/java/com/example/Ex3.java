@@ -26,16 +26,20 @@ public class Ex3 {
     }
 
     System.out.print("Diagonal principal: ");
+    int soma = 0;
     for (int linha = 0; linha < matriz.length; linha++) {
+      soma += matriz[linha][linha];
       System.out.print(matriz[linha][linha] + " ");
     }
-    System.out.println();
+    System.out.println("Soma: " + soma);
 
     System.out.print("Diagonal secundária: ");
+    soma = 0;
     for (int coluna = matriz.length; coluna > 0; coluna--) {
+      soma += matriz[matriz.length - coluna][coluna - 1];
       System.out.print(matriz[matriz.length - coluna][coluna - 1] + " ");
     }
-    System.out.println();
+    System.out.println("Soma: " + soma);
 
     leitor.close();
   }
